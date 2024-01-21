@@ -42,20 +42,20 @@ selected_movie_name = st.selectbox(
 if st.button('Recommend'):
     names,poster = recommend(selected_movie_name)
     
-    col1, col2, col3 = st.columns(3)
+    col1, col2, col3, col4, col5 = st.columns(5)
     with col1:
         st.text(names[0])
         st.image(poster[0])
-    with col1:
+    with col2:
         st.text(names[1])
         st.image(poster[1])
-    with col1:
+    with col3:
         st.text(names[2])
         st.image(poster[2])
-    with col1:
+    with col4:
         st.text(names[3])
         st.image(poster[3])
-    with col1:
+    with col5:
         st.text(names[4])
         st.image(poster[4])
     
